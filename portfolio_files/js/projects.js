@@ -50,56 +50,10 @@ function mapProjectsData() {
                     "link": "https://github.com/abhay1maurya/books-recommendation-system"
                 }
             ]
-        },
-        {
-            "title": "project 4",
-            "image": "",
-            "type": "",
-            "labels": [
-                {
-                    "title": "Web",
-                    "link": ""
-                },
-                {
-                    "title": "GitHub",
-                    "link": ""
-                },
-                
-
-            ]
-        },
-        {
-            "title": "project 5",
-            "image": "",
-            "type": "",
-            "labels": [
-                
-                {
-                    "title": "Web",
-                    "link": ""
-                },
-                {
-                    "title": "Github",
-                    "link": ""
-                }
-            ]
-        },
-        {
-            "title": "project 6",
-            "image": "",
-            "type": "",
-            "labels": [
-                
-                {
-                    "title": "Web",
-                    "link": ""
-                },
-                {
-                    "title": "GitHub",
-                    "link": ""
-                }
-            ]
         }
+        
+       
+        
     ];
 
     for (var i = 0; i < projects.length; i++) {

@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-dark);
+    background-color: var(--bg);
 }
 
 #project-subtitle {
@@ -24,7 +24,7 @@
 
 .project-card {
     margin: 1em;
-    background-color: var(--bg);
+    background-color:var(--bg) ;
     height: 300px;
     width: 350px;
     border-radius: 8px;

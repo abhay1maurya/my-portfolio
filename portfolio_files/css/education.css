@@ -1,0 +1,65 @@
+:root {
+    --primary-green: #4CAF50;
+    --bg-dark: #262525;
+    --text-light: #f7f5f5;
+}
+#education-title{
+    text-align: center; 
+    background-color: transparent;
+    color: var(--primary-green);
+    font-size: 25px;
+    font-weight: 700;
+}
+#education-text{
+    text-align: center; 
+    background-color: transparent; 
+    color:white;
+}
+.education-div {
+    padding: 50px 20px;
+    background-color: var(--bg-dark);
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.edu-entry {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding: 20px;
+    background: #333232;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 2px 10px rgba(5, 5, 5, 0.1);
+    
+}
+
+.edu-entry.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.edu-entry h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-green);
+    background-color: #333232 ;
+
+}
+
+.edu-entry p {
+    margin: 3px 0;
+    color: var(--text-light);
+    background-color: #333232 ;
+}
+.education-text {
+    color: white;
+    width: 400px;
+    background-color: transparent;
+    text-align: center;
+}

@@ -9,6 +9,7 @@
 
 .contact-info-div {
     padding-left: 10%;
+    background-color: var(--bg-dark);
 }
 
 .contact-row {
@@ -16,8 +17,8 @@
     justify-self: center;
     align-items: center;
     padding-top: 5%;
+    background-color: var(--bg-dark);
 }
-
 .contact-card {
     margin-top: 4%;
     width: 400px;
@@ -28,7 +29,7 @@
     display: flex;
     align-items: center;
     border-radius: 8px;
-    background-color: var(--bg-dark);
+    background-color: var(--bg);
     transition: .5s;
 }
 
@@ -65,4 +66,5 @@
 .social-contact-icons {
     display: flex;
     justify-content: space-around;
+    background-color: var(--bg-dark);
 }

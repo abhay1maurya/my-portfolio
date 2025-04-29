@@ -72,6 +72,9 @@
 
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/education.css">
+    <script src="js/education.js"></script>
+
 
 </head>
 
@@ -98,8 +101,13 @@
                     <a href="#projects-div" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item navbar-action">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item navbar-action">
                     <a href="#contact-info-div" class="nav-link">Contact</a>
                 </li>
+                
+                
                 
             </ul>
         </div>
@@ -222,9 +230,49 @@
         </div>
     </div>
 
+</div>
+
+<!-- Education-->
+<div id="education" class="container-fluid education-div">
+    <p id="education-title"  >Education</p>
+    <p id="education-text" >
+        A quick snapshot of my academic journey 📚
+    </p>
+
+    <div class="education-timeline">
+        <div class="edu-entry">
+            <h4>Bachelor of Technology (B.Tech) in Computer Science</h4>
+            <p class="edu-details">Uttarakhand Technical University – Dr. APJ Abdul Kalam Institute of Technology, Tanakpur</p>
+            <p class="edu-years">2022 – 2026</p>
+            <p class="edu-marks">7.13 CGPA</p>
+        </div>
+
+        <div class="edu-entry">
+            <h4>Diploma in Data Science</h4>
+            <p class="edu-details">IIT Madras BS degree in Data Science and Applications</p>
+            <p class="edu-years">2022 – 2025</p>
+            <p class="edu-marks">7.26 CGPA</p>
+        </div>
+        <div class="edu-entry">
+            <h4>Class 12th</h4>
+            <p class="edu-details">CBSE – Himalayan Progressive School, Kichha </p>
+            <p class="edu-years">2021 – 2022</p>
+            <p class="edu-marks">84.80 % </p>
+        </div>
+        <div class="edu-entry">
+            <h4>Class 10th</h4>
+            <p class="edu-details">CBSE – Himalayan Progressive School, Kichha </p>
+            <p class="edu-years">2019 – 2020</p>
+            <p class="edu-marks">86.80 %</p>
+        </div>
+        <!-- Add more entries if needed -->
+    </div>
+</div>
+
+    
     <div id="projects-div" class="container-fluid projects-div">
         <p id="tech-stack-title">Projects</p>
-        <p id="tech-stack-text" style="background-color: transparent; text-align: center;">
+        <p id="tech-stack-text" style="background-color: transparent; text-align: center; font-size: 15px;">
             Stuff I loved working with
         </p>
 
@@ -251,22 +299,22 @@
 
         
 
-    <div id="contact-div" class="container-fluid contact-div">
+    <div id="contact-div" class="container-fluid contact-div" style="background-color: VAR(--bg-dark);">
         <p id="tech-stack-title">Get in touch</p>
         <p id="tech-stack-text" style="background-color: transparent; text-align: center;">
             Lets code the future together! 🚀
         </p>
 
         <div class="contact-row">
-            <div class="current-date-div">
-                <div class="current-date-container">
-                    <div class="current-month">
+            <div class="current-date-div" >
+                <div class="current-date-container" style="background-color: var(--bg);">
+                    <div class="current-month" >
                         <span id="month"></span>
                     </div>
-                    <div class="current-date">
+                    <div class="current-date" style="background-color: var(--bg);">
                         <span id="date"></span>
                     </div>
-                    <div class="current-day">
+                    <div class="current-day" style="background-color: var(--bg);">
                         <span id="day"></span>
                     </div>
                 </div>
