@@ -18,7 +18,7 @@ Welcome to my portfolio repository! I'm Abhay Maurya, a dual-degree student purs
 
 - GitHub: [abhay1maurya](https://github.com/abhay1maurya)
 - LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/abhay-maurya03/)
-- Email: [abhay.maurya0303@example.com]
+- Email: abhay.maurya0303@example.com
 
 Feel free to reach out for collaborations, discussions, or any opportunities!
 
