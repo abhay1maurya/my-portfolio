@@ -50,6 +50,21 @@ function mapProjectsData() {
                     "link": "https://github.com/abhay1maurya/books-recommendation-system"
                 }
             ]
+        },
+        {
+            "title": "task-manager-app",
+            "image": "images/projects/task.svg",
+            "type": "Frontend Development",
+            "labels": [
+                {
+                    "title": "Web",
+                    "link": "https://task-manager-app-abhay.vercel.app"
+                },
+                {
+                    "title": "GitHub",
+                    "link": "https://github.com/abhay1maurya/task-manager-app"
+                }
+                    ]
         }
         
        
