@@ -4,60 +4,129 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(180deg, rgba(4, 9, 18, 0.75), rgba(7, 12, 23, 0.55));
 }
 
 .exp-card {
-    margin-top: 5em;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 15%;
-    padding-right: 5%;
+    margin-top: 2rem;
+    padding: 2rem;
     display: flex;
-    justify-content: center;
-    background-color: var(--bg-dark);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    background: var(--surface-1);
+    border: 1px solid var(--border-soft);
     width: 90%;
-    border-radius: 8px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 211, 238, 0.5);
 }
 
 .exp-meta {
     background-color: transparent;
+    width: 35%;
 }
 
 .exp-org {
     color: var(--primary-green);
+    line-height: 1.25;
+    margin: 0;
 }
 
 .exp-position {
-    color: var(--text-light);
+    color: var(--text-main);
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.86rem;
 }
 
-.exp-session {
-    color: white;
+.exp-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+    margin-bottom: 1.1rem;
+    background-color: transparent;
+}
+
+.exp-chip {
+    color: var(--primary-cyan);
+    background: rgba(13, 22, 40, 0.8);
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    text-transform: none;
+    letter-spacing: 0.01em;
 }
 
 .exp-tech {
-    color: white;
+    color: var(--text-light);
     font-weight: 700;
+    font-size: 0.8rem;
 }
 
 .exp-tech-list {
     background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     padding: 0;
-    padding-left: 10%;
+    margin-top: 0.6rem;
+    list-style: none;
 }
 
 .exp-tech-item {
-    line-height: 30px;
-    color: white;
+    line-height: 1.2;
+    color: var(--text-main);
+    background: rgba(10, 18, 32, 0.9);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 0.4rem 0.55rem;
+    font-size: 0.84rem;
+}
+
+.exp-content {
+    width: 65%;
+    background-color: transparent;
+}
+
+.exp-impact-title {
+    color: var(--primary-cyan);
+    margin-bottom: 0.85rem;
 }
 
 .exp-detail {
-    width: 70%;
+    width: 100%;
     background-color: transparent;
-    margin-left: 3%;
-    line-height: 30px;
+    margin: 0;
+    padding-left: 1.2rem;
+    line-height: 1.75;
 }
 
 .exp-detail-item {
-    color: white;
+    color: var(--text-main);
+    margin-bottom: 0.55rem;
+}
+
+.exp-detail-item::marker {
+    color: var(--primary-green);
+}
+
+@media only screen and (max-width: 991px) {
+    .exp-card {
+        flex-direction: column;
+        gap: 1.1rem;
+        width: 95%;
+        padding: 1.4rem;
+    }
+
+    .exp-meta,
+    .exp-content {
+        width: 100%;
+    }
 }

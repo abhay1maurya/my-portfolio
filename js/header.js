@@ -30,20 +30,8 @@ function mapSocialLinksData() {
             "value": "https://github.com/abhay1maurya"
         },
         {
-            "icon": "fa fa-medium",
-            "value": ""
-        },
-        {
-            "icon": "fa fa-facebook-square",
-            "value": "https://www.facebook.com/profile.php?id=61564083130077"
-        },
-        {
-            "icon": "fa fa-instagram",
-            "value": "https://www.instagram.com/abhay_maurya_3/"
-        },
-        {
-            "icon": "fa fa-twitter",
-            "value": "https://x.com/Abhay141312"
+            "icon": "fa fa-envelope",
+            "value": "mailto:abhay.maurya0303@gmail.com"
         }
     ];
 
@@ -90,21 +78,26 @@ function mapSocialLinksData() {
 }
 
 function mapStatsData() {
+    var overaAllStatsDiv = document.getElementById("overall-stats");
+    if (!overaAllStatsDiv) {
+        return;
+    }
+
     let stats = [
         {
-            "value": "~5",
-            "text-1": "Years",
-            "text-2": "Experience"
+            "value": "3+",
+            "text-1": "Core",
+            "text-2": "Internships & Certifications"
         },
         {
-            "value": "45+",
+            "value": "3",
             "text-1": "Projects Completed",
-            "text-2": "in 10+ Countries"
+            "text-2": "Highlighted in Portfolio"
         },
         {
-            "value": "~120k",
-            "text-1": "Content",
-            "text-2": "Reach & Views"
+            "value": "2",
+            "text-1": "Current",
+            "text-2": "Learning Tracks"
         }
     ];
 
@@ -138,7 +131,6 @@ function mapStatsData() {
         div.appendChild(valueText);
         div.appendChild(textColumn);
 
-        var overaAllStatsDiv = document.getElementById("overall-stats");
         overaAllStatsDiv.append(div);
     }
 }

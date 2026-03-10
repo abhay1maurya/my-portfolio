@@ -13,7 +13,17 @@ function mapContactDetails() {
         {
             "icon": "fa fa-envelope",
             "label": "abhay.maurya0303@gmail.com",
-            "link": "abhay.maurya0303@gmail.com"
+            "link": "mailto:abhay.maurya0303@gmail.com"
+        },
+        {
+            "icon": "fa fa-github",
+            "label": "github.com/abhay1maurya",
+            "link": "https://github.com/abhay1maurya"
+        },
+        {
+            "icon": "fa fa-linkedin-square",
+            "label": "linkedin.com/in/abhay-maurya03",
+            "link": "https://www.linkedin.com/in/abhay-maurya03/"
         }
     ];
 

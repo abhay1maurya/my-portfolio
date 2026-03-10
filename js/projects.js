@@ -5,13 +5,31 @@ document.addEventListener("DOMContentLoaded", function () {
 function mapProjectsData() {
     let projects = [
         {
-            "title": "System-Threat-Forecaster",
+            "title": "Smart Crop Advisory System",
             "image": "images/projects/stf.svg",
             "type": "Machine Learning",
+            "summary": "Crop recommendation and plant health insights using ensemble learning and image-based disease detection.",
+            "stack": ["Python", "Random Forest", "CNN", "Feature Engineering"],
             "labels": [
-                
                 {
-                    "title": "Web",
+                    "title": "Case Study",
+                    "link": ""
+                },
+                {
+                    "title": "GitHub",
+                    "link": "https://github.com/abhay1maurya"
+                }
+            ]
+        },
+        {
+            "title": "System Threat Forecaster",
+            "image": "images/projects/bdm.svg",
+            "type": "Machine Learning",
+            "summary": "Threat prediction pipeline built on system-log features with robust evaluation across precision-focused metrics.",
+            "stack": ["XGBoost", "Random Forest", "Python", "Model Evaluation"],
+            "labels": [
+                {
+                    "title": "Case Study",
                     "link": ""
                 },
                 {
@@ -21,54 +39,22 @@ function mapProjectsData() {
             ]
         },
         {
-            "title": "BDM-Capstone-Project",
-            "image": "images/projects/bdm.svg",
-            "type": "Business Data Management",
-            "labels": [
-                
-                {
-                    "title": "Web",
-                    "link": ""
-                },
-                {
-                    "title": "GitHub",
-                    "link": "https://github.com/abhay1maurya/BDM-Capstone-Project"
-                }
-            ]
-        },
-        {
-            "title": "books-recommendation-system",
+            "title": "Data-Driven Sales Optimization",
             "image": "images/projects/brs.svg",
-            "type": "Machine Learning",
+            "type": "Data Analysis",
+            "summary": "Sales trend analysis and dashboard-driven reporting to identify revenue gaps and improve business decisions.",
+            "stack": ["Excel", "Pandas", "NumPy", "Reporting"],
             "labels": [
                 {
-                    "title": "Web",
+                    "title": "Case Study",
                     "link": ""
                 },
                 {
                     "title": "GitHub",
-                    "link": "https://github.com/abhay1maurya/books-recommendation-system"
+                    "link": "https://github.com/abhay1maurya"
                 }
             ]
-        },
-        {
-            "title": "task-manager-app",
-            "image": "images/projects/task.svg",
-            "type": "Frontend Development",
-            "labels": [
-                {
-                    "title": "Web",
-                    "link": "https://task-manager-app-abhay.vercel.app"
-                },
-                {
-                    "title": "GitHub",
-                    "link": "https://github.com/abhay1maurya/task-manager-app"
-                }
-                    ]
         }
-        
-       
-        
     ];
 
     for (var i = 0; i < projects.length; i++) {
@@ -98,6 +84,20 @@ function mapProjectsData() {
         projectName.className = "body1 p-title";
         projectName.innerHTML = title;
 
+        var projectSummary = document.createElement("p");
+        projectSummary.className = "body2 p-summary";
+        projectSummary.innerHTML = project.summary;
+
+        var stackWrap = document.createElement("div");
+        stackWrap.className = "p-stack";
+
+        for (var s = 0; s < project.stack.length; s++) {
+            var stackTag = document.createElement("span");
+            stackTag.className = "label p-stack-item";
+            stackTag.innerHTML = project.stack[s];
+            stackWrap.appendChild(stackTag);
+        }
+
         var labels = document.createElement("div");
         labels.className = "p-labels";
 
@@ -113,7 +113,7 @@ function mapProjectsData() {
                 labelIcon.className = "p-label-icon fa fa-apple";
             } else if (title == "Play") {
                 labelIcon.className = "p-label-icon fa fa-google";
-            } else if (title == "Web") {
+            } else if (title == "Web" || title == "Case Study") {
                 labelIcon.className = "p-label-icon fa fa-globe";
             } else if (title == "GitHub") {
                 labelIcon.className = "p-label-icon fa fa-github";
@@ -130,6 +130,13 @@ function mapProjectsData() {
             label.href = link;
             label.target = "_blank";
 
+            if (!link) {
+                label.classList.add("p-label-disabled");
+                label.href = "javascript:void(0)";
+                label.target = "_self";
+                label.setAttribute("aria-disabled", "true");
+            }
+
             label.appendChild(labelIcon);
             label.appendChild(labelText);
 
@@ -140,6 +147,8 @@ function mapProjectsData() {
         card.appendChild(projectLabel);
         card.appendChild(projectImg);
         card.appendChild(projectName);
+        card.appendChild(projectSummary);
+        card.appendChild(stackWrap);
         card.appendChild(labels);
 
         var projectsDiv = document.getElementById("projects");

@@ -1,27 +1,42 @@
 :root {
-    --primary-green: #6EF3A5;
-    --text-light: #7D7E83;
-    --bg: #2D2E32;
-    --bg-dark: #25262A;
+    --primary-green: #21f3b0;
+    --primary-cyan: #22d3ee;
+    --text-light: #a6b0c3;
+    --text-main: #e9efff;
+    --bg: #070c17;
+    --bg-dark: #040811;
+    --surface-1: rgba(16, 23, 41, 0.72);
+    --surface-2: rgba(25, 34, 57, 0.78);
+    --border-soft: rgba(120, 143, 189, 0.26);
+    --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 * {
-    background-color: var(--bg);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', 'Sora', sans-serif;
+}
+
+body {
+    margin: 0;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 18% 20%, rgba(33, 243, 176, 0.14), transparent 32%),
+        radial-gradient(circle at 82% 0%, rgba(34, 211, 238, 0.12), transparent 34%),
+        linear-gradient(155deg, #030712 0%, #0a1223 48%, #060b18 100%);
+    min-height: 100vh;
 }
 
 .primary {
-    color: #6EF3A5;
+    color: var(--primary-green);
 }
 
 .text-light {
-    color: #7D7E83;
+    color: var(--text-light);
 }
 
 .bg {
-    background-color: #2D2E32;
+    background-color: var(--bg);
 }
 
 .bg-dark {
-    background-color: #25262A;
+    background-color: var(--bg-dark);
 }

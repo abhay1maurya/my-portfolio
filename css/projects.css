@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg);
+    background: linear-gradient(180deg, rgba(7, 12, 23, 0.45), rgba(4, 9, 18, 0.75));
 }
 
 #project-subtitle {
@@ -20,16 +20,19 @@
     flex-wrap: wrap;
     background-color: transparent;
     justify-content: center;
+    gap: 0.75rem;
 }
 
 .project-card {
     margin: 1em;
-    background-color:var(--bg) ;
-    height: 300px;
-    width: 350px;
-    border-radius: 8px;
-    box-shadow: 0px 13px 10px rgba(0, 0, 0, 0.25);
+    background: var(--surface-1);
+    border: 1px solid var(--border-soft);
+    min-height: 420px;
+    width: min(100%, 360px);
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
     transition: 0.5s;
+    overflow: hidden;
 }
 
 .p-type {
@@ -38,7 +41,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    background-color: var(--bg-dark);
+    background-color: rgba(7, 12, 23, 0.85);
     position: absolute;
     color: var(--primary-green);
     padding-top: 0.2%;
@@ -49,19 +52,56 @@
 }
 
 .p-image-bg {
-    border-radius: 8px;
-    max-width: 100%;
+    border-radius: 0;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
 }
 
 .p-title {
-    color: white;
-    padding-top: 5%;
-    padding-left: 3%;
+    color: var(--text-main);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+}
+
+.p-summary {
+    color: var(--text-light);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 1.55;
+    min-height: 74px;
+    margin-bottom: 0.7rem;
+}
+
+.p-stack {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    background-color: transparent;
+    margin-bottom: 0.7rem;
+}
+
+.p-stack-item {
+    color: var(--primary-cyan);
+    border: 1px solid var(--border-soft);
+    background: rgba(6, 12, 23, 0.75);
+    padding: 0.28rem 0.52rem;
+    border-radius: 999px;
+    text-transform: none;
+    letter-spacing: 0.02em;
 }
 
 .p-labels {
-    padding-left: 3%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     display: flex;
+    gap: 0.6rem;
 }
 
 .p-label-icon {
@@ -72,43 +112,51 @@
 }
 
 .p-label {
-    margin-right: 3%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 6px;
-    background-color: var(--bg-dark);
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background-color: rgba(8, 14, 26, 0.84);
     transition: 0.5s;
+}
+
+.p-label-disabled {
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 .p-label:hover {
     text-decoration: none;
     cursor: pointer;
-    background-color: white;
-    box-shadow: 0px 0px 10px var(--primary-green);
+    transform: translateY(-2px);
+    background: linear-gradient(120deg, var(--primary-green), var(--primary-cyan));
+    box-shadow: 0 14px 25px rgba(33, 243, 176, 0.22);
 }
 
 .p-label:hover .p-label-icon {
-    color: var(--bg-dark);
+    color: #06101f;
 }
 
 .p-label-text {
-    margin-left: 15%;
+    margin-left: 0.4rem;
     background-color: transparent;
     color: var(--primary-green);
     transition: .5s;
 }
 
 .p-label:hover .p-label-text {
-    color: var(--bg-dark);
+    color: #06101f;
 }
 
 .project-card:hover {
-    box-shadow: 0px 5px 10px var(--primary-green);
+    transform: translateY(-5px);
+    border-color: rgba(34, 211, 238, 0.55);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.28);
 }
 
 .see-more {
@@ -124,4 +172,15 @@
     text-decoration: underline;
     text-underline-offset: 10px;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .project-card {
+        margin: 0.5rem 0;
+        width: min(100%, 420px);
+    }
+
+    .p-summary {
+        min-height: auto;
+    }
 }
