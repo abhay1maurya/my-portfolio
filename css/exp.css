@@ -1,132 +1,341 @@
-.exp-div {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(4, 9, 18, 0.75), rgba(7, 12, 23, 0.55));
+/* ═══════════════════════════════════════════
+   EXPERIENCE SECTION
+   ═══════════════════════════════════════════ */
+
+.exp-section {
+    background: linear-gradient(180deg, rgba(4, 9, 18, 0.5), rgba(7, 12, 23, 0.4));
+    position: relative;
 }
 
+/* ═══ Vertical Timeline Track Container ═══ */
+.exp-timeline-container {
+    position: relative;
+    max-width: 950px;
+    margin: var(--space-xl) auto 0;
+}
+
+/* Timeline Vertical Line Gradient */
+.exp-timeline-line {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 30px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-green), var(--primary-cyan), transparent 95%);
+    box-shadow: 0 0 10px rgba(33, 243, 176, 0.12);
+    z-index: 1;
+}
+
+/* ── Step Card Wrapper ── */
+.exp-card-wrapper {
+    position: relative;
+    padding-left: 75px;
+    margin-bottom: var(--space-xl);
+}
+
+.exp-card-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Connecting Node Dot */
+.exp-card-node-dot {
+    position: absolute;
+    left: 21px; /* 21px + (18px / 2) = 30px node line alignment */
+    top: 31px; /* Centered with emblem box */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-dark);
+    background: var(--exp-theme, var(--primary-cyan));
+    box-shadow: 0 0 12px var(--exp-theme, var(--primary-cyan));
+    z-index: 3;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exp-card-wrapper:hover .exp-card-node-dot {
+    transform: scale(1.25);
+    background: var(--primary-green);
+    box-shadow: 0 0 16px var(--primary-green);
+}
+
+/* ═══ Experience Glass Card ═══ */
 .exp-card {
-    margin-top: 2rem;
-    padding: 2rem;
+    --exp-theme: var(--primary-cyan);
+    --exp-theme-rgb: 34, 211, 238;
+
+    background: radial-gradient(circle at top left, rgba(var(--exp-theme-rgb), 0.08) 0%, rgba(14, 23, 44, 0.6) 60%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-left: 3px solid var(--exp-theme);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    background: var(--surface-1);
-    border: 1px solid var(--border-soft);
-    width: 90%;
-    border-radius: 14px;
-    box-shadow: var(--shadow-soft);
-    transition: 0.3s ease;
+    flex-direction: column;
+    gap: var(--space-md);
+    position: relative;
+    transition: transform var(--duration-normal) var(--ease-out-expo),
+                border-color var(--duration-normal) ease,
+                box-shadow var(--duration-normal) ease;
 }
 
 .exp-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(34, 211, 238, 0.5);
+    border-color: rgba(var(--exp-theme-rgb), 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45),
+                0 0 25px rgba(var(--exp-theme-rgb), 0.15),
+                inset 0 0 12px rgba(var(--exp-theme-rgb), 0.05);
 }
 
-.exp-meta {
-    background-color: transparent;
-    width: 35%;
+/* ── Card Header (Emblem & Texts) ── */
+.exp-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: transparent;
+}
+
+.exp-emblem {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(var(--exp-theme-rgb), 0.22) 0%, rgba(var(--exp-theme-rgb), 0.08) 100%);
+    border: 1px solid rgba(var(--exp-theme-rgb), 0.35);
+    color: var(--exp-theme);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(var(--exp-theme-rgb), 0.08);
+    transition: transform 0.3s ease;
+}
+
+.exp-card:hover .exp-emblem {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.exp-header-info {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
 }
 
 .exp-org {
-    color: var(--primary-green);
-    line-height: 1.25;
+    color: var(--text-main);
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: 'Sora', sans-serif;
     margin: 0;
+    line-height: 1.3;
 }
 
 .exp-position {
-    color: var(--text-main);
-    display: inline-block;
-    margin-top: 0.6rem;
+    color: var(--text-light);
     font-size: 0.86rem;
+    font-weight: 500;
+    margin-top: 0.15rem;
 }
 
+/* ── Meta row (Chips) ── */
 .exp-meta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.9rem;
-    margin-bottom: 1.1rem;
-    background-color: transparent;
+    gap: 0.45rem;
+    background: transparent;
 }
 
 .exp-chip {
-    color: var(--primary-cyan);
-    background: rgba(13, 22, 40, 0.8);
-    border: 1px solid var(--border-soft);
-    border-radius: 999px;
-    padding: 0.35rem 0.7rem;
-    text-transform: none;
-    letter-spacing: 0.01em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--exp-theme);
+    background: rgba(var(--exp-theme-rgb), 0.08);
+    border: 1px solid rgba(var(--exp-theme-rgb), 0.2);
+    border-radius: var(--radius-full);
+    padding: 0.3rem 0.75rem;
+    letter-spacing: 0.02em;
 }
 
-.exp-tech {
-    color: var(--text-light);
-    font-weight: 700;
-    font-size: 0.8rem;
+/* ── Card Body Grid ── */
+.exp-card-body {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-xl);
+    background: transparent;
+    margin-top: 0.3rem;
 }
 
-.exp-tech-list {
-    background-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0;
-    margin-top: 0.6rem;
-    list-style: none;
-}
-
-.exp-tech-item {
-    line-height: 1.2;
-    color: var(--text-main);
-    background: rgba(10, 18, 32, 0.9);
-    border: 1px solid var(--border-soft);
-    border-radius: 8px;
-    padding: 0.4rem 0.55rem;
-    font-size: 0.84rem;
-}
-
-.exp-content {
-    width: 65%;
-    background-color: transparent;
+/* Left Pane (Contributions) */
+.exp-card-body-left {
+    background: transparent;
 }
 
 .exp-impact-title {
-    color: var(--primary-cyan);
-    margin-bottom: 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
 }
 
 .exp-detail {
-    width: 100%;
-    background-color: transparent;
-    margin: 0;
-    padding-left: 1.2rem;
-    line-height: 1.75;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    list-style: none;
+    padding: 0;
+    background: transparent;
 }
 
 .exp-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.exp-bullet-check {
+    color: var(--exp-theme);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.exp-bullet-check svg {
+    display: block;
+}
+
+/* Right Pane (Stats & Tools) */
+.exp-card-body-right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    background: transparent;
+}
+
+/* Stat Achievements boxes */
+.exp-stats-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    background: transparent;
+}
+
+.exp-stat-box {
+    background: rgba(6, 11, 22, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 0.7rem var(--space-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exp-stat-val {
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 0.55rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.01em;
 }
 
-.exp-detail-item::marker {
-    color: var(--primary-green);
+.exp-stat-label {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+    letter-spacing: 0.03em;
 }
 
-@media only screen and (max-width: 991px) {
-    .exp-card {
-        flex-direction: column;
-        gap: 1.1rem;
-        width: 95%;
-        padding: 1.4rem;
+/* Tech mapping */
+.exp-tech-section {
+    background: transparent;
+}
+
+.exp-tech-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.exp-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background: transparent;
+}
+
+.exp-tech-pill {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-main);
+    font-size: 0.72rem;
+    font-weight: 500;
+    background: rgba(6, 11, 22, 0.75);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    padding: 0.3rem 0.65rem;
+    transition: all var(--duration-fast) ease;
+}
+
+
+.exp-tech-pill:hover {
+    border-color: var(--exp-theme);
+    background: rgba(var(--exp-theme-rgb), 0.06);
+    transform: translateY(-1px);
+}
+
+.exp-card:hover .exp-tech-pill {
+    border-color: rgba(var(--exp-theme-rgb), 0.18);
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 991px) {
+    .exp-card-body {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .exp-timeline-line {
+        left: 15px;
     }
 
-    .exp-meta,
-    .exp-content {
-        width: 100%;
+    .exp-card-wrapper {
+        padding-left: 45px;
+    }
+
+    .exp-card-node-dot {
+        left: 6px; /* Centered on 15px line */
+        top: 28px;
+    }
+
+    .exp-card {
+        padding: var(--space-lg);
+    }
+    
+    .exp-emblem {
+        width: 44px;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+    
+    .exp-org {
+        font-size: 1.05rem;
     }
 }

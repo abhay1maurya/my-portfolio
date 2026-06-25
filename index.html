@@ -1,359 +1,402 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <!-- mobile responsiveness -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Abhay Maurya — Data Scientist & ML Engineer. Portfolio showcasing machine learning, data science projects, and professional experience.">
+    <meta name="theme-color" content="#060b16">
+    <meta name="author" content="Abhay Maurya">
 
-    <!-- meta tags for link preview -->
-    <meta property="og:title" content="" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Abhay Maurya — Data Scientist & ML Engineer" />
+    <meta property="og:description"
+        content="Portfolio showcasing machine learning, data science projects, and professional experience." />
     <meta property="og:url" content="" />
-    <meta property="og:image"
-        content="" />
+    <meta property="og:image" content="" />
 
-
-    <title>Abhay</title>
+    <title>Abhay Maurya — Portfolio</title>
     <link rel="icon" href="images//title/pandion.ico" type="image/icon type">
 
-    <!-- css -->
-    <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Core CSS -->
     <link rel="stylesheet" href="theme/core.css">
     <link rel="stylesheet" href="theme/text_styles.css">
-
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/techStack.css">
+    <link rel="stylesheet" href="css/education.css">
+    <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/exp.css">
-    
     <link rel="stylesheet" href="css/contact.css">
-
     <link rel="stylesheet" href="components/currentDate.css">
-
-    <!-- Required for AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- media queries -->
-    <!-- mobile -->
-    <link rel="stylesheet" href="media/mobile/s.css">
-    <link rel="stylesheet" href="media/mobile/xs.css">
-
-    <!-- tablet -->
-    <link rel="stylesheet" href="media/tablet/m.css">
-
-    <!-- desktop -->
-    <link rel="stylesheet" href="media/desktop/ml.css">
-    <link rel="stylesheet" href="media/desktop/l.css">
-    <link rel="stylesheet" href="media/desktop/xl.css">
-    <link rel="stylesheet" href="media/desktop/xl_4k.css">
-
-    <!-- others -->
-    <link rel="stylesheet" href="media/others.css">
-
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- icons -->
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-
-    <!-- scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/education.css">
-    <script src="js/education.js"></script>
-
-
 </head>
 
 <body>
+    <!-- ═══ Mouse Glow ═══ -->
+    <div id="mouse-glow" class="mouse-glow"></div>
 
-    <nav class="navbar navbar-dark navbar-expand-md" id="app-navbar">
-        <button id="navbar-icon" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
-            <img src="images//svgs/menu.svg" alt="">
-        </button>
-
-        <a href="#" data-aos="fade-down" data-aos-delay="200" class="navbar-brand">
-            < <span id="brand">Abhay </span>/>
+    <!-- ═══ Navbar ═══ -->
+    <nav id="app-navbar" class="navbar">
+        <a href="#" class="navbar-brand">
+            &lt; <span id="brand">Abhay </span>/&gt;
         </a>
 
-        <div class="collapse navbar-collapse" id="navbar-menu">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item navbar-action">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item navbar-action">
-                    <a href="#tech" class="nav-link">Tech</a>
-                </li>
-                <li class="nav-item navbar-action">
-                    <a href="#projects-div" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item navbar-action">
-                    <a href="#exp" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item navbar-action">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item navbar-action">
-                    <a href="#certifications" class="nav-link">Certifications</a>
-                </li>
-                <li class="nav-item navbar-action">
-                    <a href="#contact-info-div" class="nav-link">Contact</a>
-                </li>
-                
-                
-                
-            </ul>
-        </div>
+        <button id="navbar-toggle" class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#tech" class="nav-link">Skills</a></li>
+            <li><a href="#exp" class="nav-link">Experience</a></li>
+            <li><a href="#projects-div" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#contact-div" class="nav-link">Contact</a></li>
+        </ul>
     </nav>
 
-    <div id="up" class="up">
-        <i id="up-icon" class="fa fa-chevron-up"></i>
+    <!-- ═══ Scroll To Top ═══ -->
+    <div id="up" class="scroll-top">
+        <i class="fa fa-chevron-up"></i>
     </div>
 
-    <div id="header-div" class="container-fluid">
-        <div class="grad-circle" id="mini-circle">
-            <a href="https://github.com/abhay1maurya
-            " target="_blank">
-                <i id="repo-link" class="fa fa-github"></i>
-            </a>
-        </div>
-        <div class="grad-circle"></div>
+    <main>
+        <!-- ═══ Hero Section ═══ -->
+        <header id="header-div" class="hero">
+            <canvas id="particle-canvas" class="particle-canvas"></canvas>
 
-        <div class="tag-wrapper">
-            <div id="chip">
-                <span id="tag-label" class="label tag-title"></span>
-            </div>
-        </div>
-
-        <div class="name">
-            <div class="heading1" id="first-name"></div>
-            <div class="heading1" id="last-name"></div>
-        </div>
-
-        <div class="tag">
-            <div class="trianlge-right"></div>
-            <span id="tag" class="txt-type" data-wait="1000ms"
-                data-words='["Data Science", "Machine Learning", "Feature Engineering", "Model Evaluation", "Python", "SQL", "Scikit-learn", "XGBoost", "FastAPI", "Flask"]'>
-            </span>
-        </div>
-
-        <div id="social-handles" class="flexbox-container">
-            <div class="dash"></div>
-        </div>
-
-        <div class="chat">
-            <a href="#contact-div" class="body2" id="chat-btn">LET'S CHAT!</a>
-        </div>
-
-        <div class="container-fluid image-bg-div">
-            <div class="profile-picture">
-                <img class="dp" src="images/me-bw.png" alt="abhay maurya profile picture">
-            </div>
-
-            
-        </div>
-    </div>
-
-    <div class="circle" id="circle-1"></div>
-    <div class="circle" id="circle-2"></div>
-
-    <div class="space"></div>
-
-    <div id="about" class="container-fluid about">
-        <div class="about-img">
-            <img id="about-img" src="images//about/about.png" alt="my journey highlights" height="500">
-        </div>
-
-        <div class="about-text">
-            <p id="about-me-title">About Me</p>
-
-            <h1 id="about-me-heading">Hello Pals! My name is Abhay</h1>
-
-            <p id="about-quote">
-                "Turning data into actionable insights through practical machine learning."
-            </p>
-
-            <p id="about-me-text">I am a Data Scientist-oriented final-year B.Tech CSE student with hands-on experience in statistical analysis, feature engineering, and machine learning modeling. I work on data preprocessing, model evaluation, and extracting actionable insights from structured and unstructured datasets. Alongside my B.Tech at Uttarakhand Technical University, I am also pursuing a Diploma in Data Science from IIT Madras.
-            </p>
-
-            <div class="download-resume">
-                <button type="button" onclick="downloadResume()" class="btn btn-success" id="download-btn">
-                    <i class="fa fa-file-text" style="color: black; background-color: transparent;"></i>
-                    <span
-                        style="color: black; background-color: transparent; font-size: 14px; padding-left: 8px;">Download
-                        Resume</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="tech" class=" tech-stack">
-        <div class="tech-stack-detail">
-            <p id="tech-stack-title">Tech Stack</p>
-            <p id="tech-stack-text">
-                Tools I actively use to build end-to-end data science and machine learning solutions.
-            </p>
-            <p class="tech-stack-note">Presented as a skills matrix by domain and workflow.</p>
-
-            <div id="skills-matrix" class="skills-matrix" data-aos="fade-up" data-aos-delay="250"></div>
-        </div>
-
-        <div class="stack-illustration">
-            <img id="stack-illustration" src="images/svgs/stack.svg" alt="stack illustrations">
-        </div>
-    </div>
-
-</div>
-
-<!-- Education-->
-<div id="education" class="container-fluid education-div">
-    <p id="education-title"  >Education</p>
-    <p id="education-text" >
-        Academic background and credentials.
-    </p>
-
-    <div class="education-timeline">
-        <div class="edu-entry">
-            <h4>Bachelor of Technology (B.Tech) in Computer Science</h4>
-            <p class="edu-details">Uttarakhand Technical University – Dr. APJ Abdul Kalam Institute of Technology, Tanakpur</p>
-            <p class="edu-years">2022 – 2026</p>
-            <p class="edu-marks">CGPA: 7.21</p>
-        </div>
-
-        <div class="edu-entry">
-            <h4>Diploma in Data Science</h4>
-            <p class="edu-details">IIT Madras BS degree in Data Science and Applications</p>
-            <p class="edu-years">2022 – 2025</p>
-            <p class="edu-marks">CGPA: 7.29</p>
-        </div>
-        <!-- Add more entries if needed -->
-    </div>
-</div>
-
-<div id="certifications" class="container-fluid education-div">
-    <p id="education-title">Certifications</p>
-    <p id="education-text">Professional learning highlights.</p>
-
-    <div class="education-timeline">
-        <div class="edu-entry">
-            <h4>Programming and Data Science - Foundation Level</h4>
-            <p class="edu-details">Indian Institute of Technology (IIT) Madras</p>
-            <p class="edu-years">Dec 2023</p>
-        </div>
-
-        <div class="edu-entry">
-            <h4>Machine Learning A-Z: AI, Python & R + ChatGPT Prize</h4>
-            <p class="edu-details">Udemy</p>
-            <p class="edu-years">Sept 2024</p>
-        </div>
-
-        <div class="edu-entry">
-            <h4>Artificial Intelligence Fundamentals</h4>
-            <p class="edu-details">IBM SkillsBuild</p>
-        </div>
-    </div>
-</div>
-
-    
-    <div id="projects-div" class="container-fluid projects-div">
-        <p id="tech-stack-title">Projects</p>
-        <p id="tech-stack-text" style="background-color: transparent; text-align: center; font-size: 15px;">
-            Featured projects with measurable impact, methods, and tools
-        </p>
-
-        <div style="height: 50px;"></div>
-
-        <div id="projects" class="projects"></div>
-
-        <div class="see-more">
-            <a target="_blank" href="https://github.com/abhay1maurya?tab=repositories" class="body2" id="see-more-btn">See More</a>
-        </div>
-
-    </div>
-    
-    <div id="exp" class="container-fluid exp-div">
-        <p id="tech-stack-title">Experience</p>
-        <p id="tech-stack-text" style="background-color: transparent; text-align: center; font-size: 15px;">
-            Hands-on ML, AI, and cloud internship journey
-        </p>
-
-    </div>
-
-    
-
-        
-
-    <div id="contact-div" class="container-fluid contact-div" style="background-color: VAR(--bg-dark);">
-        <p id="tech-stack-title">Get in touch</p>
-        <p id="tech-stack-text" style="background-color: transparent; text-align: center;">
-            Open to internships, collaborations, and data science opportunities.
-        </p>
-
-        <div class="contact-row">
-            <div class="current-date-div" >
-                <div class="current-date-container" style="background-color: var(--bg);">
-                    <div class="current-month" >
-                        <span id="month"></span>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="tag-wrapper" data-animate="fade-up-blur">
+                        <div id="chip" class="hero-chip">
+                            <span class="chip-dot"></span>
+                            <span id="tag-label" class="label"></span>
+                        </div>
                     </div>
-                    <div class="current-date" style="background-color: var(--bg);">
-                        <span id="date"></span>
+
+                    <div class="name" data-animate="fade-up-blur" data-delay="100">
+                        <div class="heading1" id="first-name"></div>
+                        <div class="heading1 text-gradient" id="last-name"></div>
                     </div>
-                    <div class="current-day" style="background-color: var(--bg);">
-                        <span id="day"></span>
+
+                    <div class="tag" data-animate="fade-up-blur" data-delay="200">
+                        <div class="trianlge-right"></div>
+                        <span id="tag" class="txt-type" data-wait="1000ms"
+                            data-words='["Generative AI", "Machine Learning", "RAG Systems", "Data Science", "Python", "FastAPI", "LangChain", "SQL", "Scikit-learn", "Model Deployment"]'>
+                        </span>
+                    </div>
+
+                    <div id="social-handles" class="social-handles" data-animate="fade-up-blur" data-delay="300">
+                        <div class="dash"></div>
+                    </div>
+
+                    <div class="hero-cta" data-animate="fade-up-blur" data-delay="400">
+                        <a href="#projects-div" class="cta-button btn-primary" id="explore-btn">
+                            <span>Explore Projects</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact-div" class="cta-button btn-secondary" id="chat-btn">
+                            <i class="fa fa-envelope-o"></i>
+                            <span>Get in Touch</span>
+                        </a>
                     </div>
                 </div>
 
-                
+                <div class="hero-image" id="hero-profile-card" data-animate="scale-in" data-delay="300">
+                    <div class="profile-glow"></div>
+                    <div class="profile-ring"></div>
+                    <img class="dp" src="images/43.png" alt="Abhay Maurya profile picture">
+
+                    <!-- Floating Stats Badges -->
+                    <div class="float-badge badge-top-left glass">
+                        <div class="badge-icon icon-cyan">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <div class="badge-text-box">
+                            <span class="badge-val">8+</span>
+                            <span class="badge-lbl">AI/ML Projects</span>
+                        </div>
+                    </div>
+
+                    <div class="float-badge badge-bottom-right glass">
+                        <div class="badge-icon icon-rose">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="badge-text-box">
+                            <span class="badge-val">7+</span>
+                            <span class="badge-lbl">Certifications</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="contact-info-div" class="contact-info-div">
-                <div class="line"></div>
-                <div id="social-contact-icons" class="social-contact-icons"></div>
-
+            <div class="scroll-indicator" data-animate="fade-up-blur" data-delay="600">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Scroll Down</span>
             </div>
+        </header>
+
+        <!-- ═══ About Section ═══ -->
+        <section id="about" class="section about-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Hello Pals! My name is Abhay</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image-card" data-animate="fade-up-blur" data-delay="100">
+                    <img id="about-img" src="images/about/about.png" alt="my journey highlights">
+                </div>
+
+                <div class="about-content" data-animate="fade-up-blur" data-delay="200">
+                    <blockquote class="about-quote">
+                        "Turning data into intelligent actions and building the next generation of AI-driven systems."
+                    </blockquote>
+
+                    <p class="about-text">
+                        I am a final-year B.Tech CSE student with hands-on experience in Machine Learning, Generative
+                        AI, and Retrieval-Augmented Generation (RAG). Alongside my engineering degree at Uttarakhand
+                        Technical University, I completed a Diploma in Data Science from IIT Madras. I specialize in
+                        building intelligent document question-answering systems, developing AI-powered web
+                        applications, and designing end-to-end ML lifecycles from data ingestion to model deployment.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="about-stat-card glass glass-hover">
+                            <span class="stat-num text-gradient">2</span>
+                            <span class="stat-label">Academic Programs</span>
+                        </div>
+                        <div class="about-stat-card glass glass-hover">
+                            <span class="stat-num text-gradient">2</span>
+                            <span class="stat-label">AI/ML Internships</span>
+                        </div>
+                        <div class="about-stat-card glass glass-hover">
+                            <span class="stat-num text-gradient">8</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="about-stat-card glass glass-hover">
+                            <span class="stat-num text-gradient">7</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+
+                    <div class="about-actions">
+                        <button type="button" onclick="downloadResume()" class="btn-primary" id="download-btn">
+                            <i class="fa fa-file-text"></i>
+                            <span>Download Resume</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ Tech Stack Section ═══ -->
+        <section id="tech" class="section tech-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">Tech Stack</span>
+                <h2 class="section-title">My Technical Toolkit</h2>
+                <p class="section-subtitle">Tools and technologies I actively use to build end-to-end AI/ML and data
+                    science solutions.</p>
+            </div>
+
+            <!-- View Switcher -->
+            <div class="tech-view-toggle-wrapper" data-animate="fade-up-blur">
+                <div class="tech-view-toggle">
+                    <button type="button" class="view-toggle-btn active" id="toggle-pipeline-view" data-view="pipeline">
+                        <i class="fa fa-sliders"></i> <span>Lifecycle Pipeline</span>
+                    </button>
+                    <button type="button" class="view-toggle-btn" id="toggle-grid-view" data-view="grid">
+                        <i class="fa fa-th"></i> <span>Skills Matrix Grid</span>
+                    </button>
+                    <div class="view-toggle-slider"></div>
+                </div>
+            </div>
+
+            <div class="tech-views-container">
+                <!-- ── Pipeline View (Default) ── -->
+                <div id="tech-pipeline-view" class="tech-view-content active" data-animate="fade-up-blur">
+                    <div class="pipeline-dashboard">
+                        <!-- Left pane: Pipeline timeline track -->
+                        <div class="pipeline-track-wrapper">
+                            <div class="pipeline-track" id="pipeline-track"></div>
+                        </div>
+                        <!-- Right pane: Detailed stage showcase -->
+                        <div class="pipeline-details-panel glass" id="pipeline-details-panel"></div>
+                    </div>
+                </div>
+
+                <!-- ── Grid View ── -->
+                <div id="tech-grid-view" class="tech-view-content hidden">
+                    <div class="tech-layout">
+                        <div class="tech-content">
+                            <p class="tech-note">Presented as a skills matrix by domain and workflow.</p>
+                            <div class="tech-filters" id="tech-filters"></div>
+                            <div id="skills-matrix" class="skills-matrix"></div>
+                        </div>
+
+                        <div class="stack-illustration">
+                            <img id="stack-illustration" src="images/svgs/stack.svg" alt="stack illustrations">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ Experience Section ═══ -->
+        <section id="exp" class="section exp-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Work History</h2>
+                <p class="section-subtitle">Hands-on experience in machine learning engineering, cloud technology, and
+                    data science.</p>
+            </div>
+
+            <div class="exp-timeline-container" data-animate="fade-up-blur">
+                <div class="exp-timeline-line"></div>
+                <div class="exp-cards-wrapper" id="exp-cards-wrapper"></div>
+            </div>
+        </section>
+
+        <!-- ═══ Projects Section ═══ -->
+        <section id="projects-div" class="section projects-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">AI systems, machine learning applications, and data products with measurable
+                    impact.</p>
+            </div>
+
+            <!-- Project Filters Switcher -->
+            <div class="projects-filter-wrapper" data-animate="fade-up-blur">
+                <div class="projects-filters" id="projects-filters"></div>
+            </div>
+
+            <div id="projects" class="projects-grid"></div>
+
+            <div class="see-more" data-animate="fade-up-blur">
+                <a target="_blank" href="https://github.com/abhay1maurya?tab=repositories" class="cta-link"
+                    id="see-more-btn">
+                    <span>See More on GitHub</span>
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══ Education Section ═══ -->
+        <section id="education" class="section education-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">Education</span>
+                <h2 class="section-title">Academic Background</h2>
+                <p class="section-subtitle">Degrees, specializations, and academic credentials.</p>
+            </div>
+
+            <div class="edu-dashboard" data-animate="fade-up-blur">
+                <!-- Left Pane: Timeline cards -->
+                <div class="edu-timeline-container">
+                    <div class="edu-timeline-line"></div>
+                    <div class="edu-cards-wrapper" id="edu-cards-wrapper"></div>
+                </div>
+                <!-- Right Pane: Showcase Details panel -->
+                <div class="edu-showcase-panel glass" id="edu-showcase-panel"></div>
+            </div>
+        </section>
+
+        <!-- ═══ Certifications Section ═══ -->
+        <section id="certifications" class="section education-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">Certifications</span>
+                <h2 class="section-title">Professional Credentials</h2>
+                <p class="section-subtitle">Learning pathways and certifications completed in AI, Cloud, and Data
+                    Science.</p>
+            </div>
+
+            <!-- Credentials Filters Switcher -->
+            <div class="cert-filter-wrapper" data-animate="fade-up-blur">
+                <div class="cert-filters" id="cert-filters"></div>
+            </div>
+
+            <!-- Credentials Cards Grid -->
+            <div class="cert-grid" id="cert-grid"></div>
+        </section>
+
+        <!-- ═══ Contact Section ═══ -->
+        <section id="contact-div" class="section contact-section">
+            <div class="section-header" data-animate="fade-up-blur">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Let's Connect!</h2>
+                <p class="section-subtitle">Open to internships, collaborations, research projects, and professional
+                    opportunities.</p>
+            </div>
+
+            <div class="contact-dashboard" data-animate="fade-up-blur" data-delay="100">
+                <!-- Left Pane: Live Clock & Status Widget -->
+                <div class="status-widget glass">
+                    <div class="status-header">
+                        <span class="status-dot-pulse" id="status-dot"></span>
+                        <span id="status-availability" class="label status-label">Checking Status...</span>
+                    </div>
+
+                    <div class="status-time-box">
+                        <span id="local-time" class="status-clock">00:00:00 AM</span>
+                        <span class="status-timezone">Indian Standard Time (IST)</span>
+                    </div>
+
+                    <div class="status-calendar">
+                        <div class="status-cal-month" id="month">Month</div>
+                        <div class="status-cal-date" id="date">00</div>
+                        <div class="status-cal-day" id="day">Weekday</div>
+                    </div>
+                </div>
+
+                <!-- Right Pane: Copyable Contacts Hub -->
+                <div class="contacts-wrapper" id="contacts-wrapper"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══ Project Specs Modal ═══ -->
+    <div id="project-modal" class="project-modal-overlay">
+        <div class="project-modal-card glass">
+            <button type="button" class="project-modal-close" id="project-modal-close"
+                aria-label="Close modal">&times;</button>
+            <div class="project-modal-body" id="project-modal-body"></div>
         </div>
     </div>
 
-    <footer class="foot">
-        <span class="body2 foot-text">Designed & Crafted by </span>
-        <span style="background-color: transparent; color: var(--primary-green); padding-left: 5px; "> Abhay with ❤️️</span>
+    <!-- ═══ Footer ═══ -->
+    <footer class="footer">
+        <span class="footer-text">Designed & Crafted by</span>
+        <span class="footer-name text-gradient"> Abhay with ❤️️</span>
     </footer>
 
+    <!-- Scripts -->
     <script type="text/javascript" src="js/header.js"></script>
     <script type="text/javascript" src="js/typeWriter.js"></script>
     <script type="text/javascript" src="js/tech.js"></script>
     <script type="text/javascript" src="js/projects.js"></script>
     <script type="text/javascript" src="js/experience.js"></script>
     <script type="text/javascript" src="js/contact.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/education.js"></script>
+    <script type="text/javascript" src="js/certifications.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-
-    <!-- JS core -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
 </body>
 
 </html>

@@ -1,136 +1,103 @@
+/* ═══════════════════════════════════════════
+   HEADER.JS — Hero Section & Brand Coordinates
+   ═══════════════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", function () {
     mapMetaDataInHeader();
     mapSocialLinksData();
-    mapStatsData();
+    initHeroParallax();
 });
-
 function mapMetaDataInHeader() {
-    // var tagElement = document.getElementById("tag-label");
-    // tagElement.innerText = '';
-
-    let firstName = 'Abhay';
-    let lastName = 'Maurya';
-
+    var firstName = "Abhay";
+    var lastName = "Maurya";
     var firstNameElement = document.getElementById("first-name");
-    firstNameElement.innerHTML = firstName;
-
+    if (firstNameElement) firstNameElement.textContent = firstName;
     var lastNameElement = document.getElementById("last-name");
-    lastNameElement.innerHTML = lastName;
-
+    if (lastNameElement) lastNameElement.textContent = lastName;
+    var tagLabelElement = document.getElementById("tag-label");
+    if (tagLabelElement) tagLabelElement.textContent = "🚀 Open for Full time role";
 }
-
 function mapSocialLinksData() {
-    let socials = [
+    var socials = [
         {
-            "icon": "fa fa-linkedin-square",
-            "value": "https://www.linkedin.com/in/abhay-maurya03/"
+            icon: "fa fa-linkedin-square",
+            value: "https://www.linkedin.com/in/abhay-maurya03/"
         },
         {
-            "icon": "fa fa-github",
-            "value": "https://github.com/abhay1maurya"
+            icon: "fa fa-github",
+            value: "https://github.com/abhay1maurya"
         },
         {
-            "icon": "fa fa-envelope",
-            "value": "mailto:abhay.maurya0303@gmail.com"
+            icon: "fa fa-envelope",
+            value: "mailto:abhay.maurya0303@gmail.com"
         }
     ];
-
-    // icons in top section
-    for (var i = 0; i < socials.length; i++) {
-        var anchor = document.createElement("a");
-        anchor.className = "social-icon-wrapper";
-
-        var icon = document.createElement("i");
-        icon.className = "social-icon " + socials[i]["icon"];
-
-        var link = socials[i]["value"];
-        anchor.href = link;
-        anchor.target = "_blank";
-
-        anchor.appendChild(icon);
-
-        var socialHandles = document.getElementById("social-handles");
-        socialHandles.appendChild(anchor);
+    // Icons in hero section
+    var socialHandles = document.getElementById("social-handles");
+    if (socialHandles) {
+        socials.forEach(function (social, index) {
+            var anchor = document.createElement("a");
+            anchor.className = "social-icon-wrapper";
+            anchor.href = socials[index].value;
+            anchor.target = "_blank";
+            anchor.setAttribute("data-animate", "scale-in");
+            anchor.setAttribute("data-delay", String(400 + index * 100));
+            var icon = document.createElement("i");
+            icon.className = "social-icon " + socials[index].icon;
+            anchor.appendChild(icon);
+            socialHandles.appendChild(anchor);
+        });
     }
-
-    // icons in contact section
-    for (var i = 0; i < socials.length; i++) {
-        var anchor = document.createElement("a");
-        anchor.className = "social-icon-wrapper";
-        anchor.style.padding = "3%";
-
-        var icon = document.createElement("i");
-        icon.className = "social-icon " + socials[i]["icon"];
-
-        var link = socials[i]["value"];
-        anchor.href = link;
-        anchor.target = "_blank";
-
-        anchor.appendChild(icon);
-
-        var socialHandlsContact = document.getElementById("social-contact-icons");
-        var extraDiv = document.createElement("div");
-
-        socialHandlsContact.appendChild(extraDiv);
-        socialHandlsContact.appendChild(anchor);
-        socialHandlsContact.appendChild(extraDiv);
+    // Icons in contact section
+    var contactIcons = document.getElementById("social-contact-icons");
+    if (contactIcons) {
+        socials.forEach(function (social, index) {
+            var anchor = document.createElement("a");
+            anchor.className = "social-icon-wrapper";
+            anchor.href = socials[index].value;
+            anchor.target = "_blank";
+            var icon = document.createElement("i");
+            icon.className = "social-icon " + socials[index].icon;
+            anchor.appendChild(icon);
+            contactIcons.appendChild(anchor);
+        });
     }
 }
+function initHeroParallax() {
+    var card = document.getElementById("hero-profile-card");
+    if (!card) return;
+    var img = card.querySelector(".dp");
+    var glow = card.querySelector(".profile-glow");
+    var ring = card.querySelector(".profile-ring");
+    var badgeLeft = card.querySelector(".badge-top-left");
+    var badgeRight = card.querySelector(".badge-bottom-right");
+    card.addEventListener("mousemove", function (e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
 
-function mapStatsData() {
-    var overaAllStatsDiv = document.getElementById("overall-stats");
-    if (!overaAllStatsDiv) {
-        return;
-    }
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
 
-    let stats = [
-        {
-            "value": "3+",
-            "text-1": "Core",
-            "text-2": "Internships & Certifications"
-        },
-        {
-            "value": "3",
-            "text-1": "Projects Completed",
-            "text-2": "Highlighted in Portfolio"
-        },
-        {
-            "value": "2",
-            "text-1": "Current",
-            "text-2": "Learning Tracks"
-        }
-    ];
+        var rotateX = (y - centerY) / centerY * -8; // max 8 degrees
+        var rotateY = (x - centerX) / centerX * 8;
+        // Apply 3D perspective rotation on wrapper card
+        card.style.transform = "perspective(1000px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)";
+        // Parallax shifts on inner visual elements
+        if (img) img.style.transform = "translateZ(30px) scale(1.02) translateX(" + (rotateY * 0.5) + "px) translateY(" + (rotateX * -0.5) + "px)";
+        if (glow) glow.style.transform = "translateZ(-20px) scale(1.1) translateX(" + (rotateY * -0.8) + "px) translateY(" + (rotateX * 0.8) + "px)";
+        if (ring) ring.style.transform = "translateZ(15px) rotate(" + (rotateY * 2) + "deg)";
 
-    for (var i = 0; i < stats.length; i++) {
-        var stat = stats[i];
-        var value = stat["value"];
-        var txt1 = stat["text-1"];
-        var txt2 = stat["text-2"];
-
-        var div = document.createElement("div");
-        div.className = "stats stats-data";
-
-        var valueText = document.createElement("h1");
-        valueText.className = "value";
-        valueText.textContent = value;
-
-        var textColumn = document.createElement("div");
-        textColumn.className = "stats-label-column";
-
-        var text1 = document.createElement("div");
-        text1.className = "label stats-label";
-        text1.innerHTML = txt1;
-
-        var text2 = document.createElement("div");
-        text2.className = "label stats-label";
-        text2.innerHTML = txt2;
-
-        textColumn.appendChild(text1);
-        textColumn.appendChild(text2);
-
-        div.appendChild(valueText);
-        div.appendChild(textColumn);
-
-        overaAllStatsDiv.append(div);
-    }
+        // Floating badges move in deeper Z dimensions
+        if (badgeLeft) badgeLeft.style.transform = "translateZ(50px) translateX(" + (rotateY * 1.2) + "px) translateY(" + (rotateX * -1.2) + "px)";
+        if (badgeRight) badgeRight.style.transform = "translateZ(45px) translateX(" + (rotateY * 1.1) + "px) translateY(" + (rotateX * -1.1) + "px)";
+    });
+    card.addEventListener("mouseleave", function () {
+        // Smoothly reset transformations
+        card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+        if (img) img.style.transform = "translateZ(0) scale(1) translateX(0) translateY(0)";
+        if (glow) glow.style.transform = "translateZ(0) scale(1) translateX(0) translateY(0)";
+        if (ring) ring.style.transform = "translateZ(0) rotate(0deg)";
+        if (badgeLeft) badgeLeft.style.transform = "translateZ(0) translateX(0) translateY(0)";
+        if (badgeRight) badgeRight.style.transform = "translateZ(0) translateX(0) translateY(0)";
+    });
 }

@@ -1,0 +1,245 @@
+/* ═══════════════════════════════════════════
+   CERTIFICATIONS & PROFESSIONAL CREDENTIALS CSS
+   ═══════════════════════════════════════════ */
+
+#certifications {
+    background: linear-gradient(180deg, rgba(4, 8, 17, 0.7), rgba(6, 11, 22, 0.3));
+    position: relative;
+}
+
+/* ── Sliding Filters ── */
+.cert-filter-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-xl);
+}
+
+.cert-filters {
+    display: flex;
+    background: rgba(14, 23, 44, 0.65);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    padding: 4px;
+    gap: 4px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.cert-filter-btn {
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-full);
+    padding: 0.6rem 1.4rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.cert-filter-btn:hover {
+    color: var(--text-main);
+}
+
+.cert-filter-btn.active {
+    background: var(--gradient-accent);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(33, 243, 176, 0.25);
+}
+
+/* ── Grid Showcase ── */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── Credential Card ── */
+.cert-card {
+    --cert-accent-theme: var(--primary-cyan);
+    --cert-accent-rgb: 34, 211, 238;
+
+    background: radial-gradient(circle at top left, rgba(var(--cert-accent-rgb), 0.05) 0%, rgba(14, 23, 44, 0.6) 70%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-top: 3px solid var(--cert-accent-theme);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    transition: transform var(--duration-normal) var(--ease-out-expo),
+                border-color var(--duration-normal) ease,
+                box-shadow var(--duration-normal) ease,
+                opacity 0.25s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(var(--cert-accent-rgb), 0.45);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 
+                0 0 25px rgba(var(--cert-accent-rgb), 0.2),
+                inset 0 0 15px rgba(var(--cert-accent-rgb), 0.05);
+}
+
+.cert-card.hidden {
+    display: none !important;
+}
+
+/* ── Card Header (Emblems + Titles) ── */
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: transparent;
+}
+
+/* Brand Emblem */
+.cert-emblem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(var(--cert-accent-rgb), 0.25), rgba(var(--cert-accent-rgb), 0.05));
+    border: 1px solid rgba(var(--cert-accent-rgb), 0.3);
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.01em;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 8px rgba(var(--cert-accent-rgb), 0.1),
+                0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform var(--duration-normal) ease;
+}
+
+.cert-card:hover .cert-emblem {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+.cert-header-info {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.cert-title {
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.cert-org {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin: 0.15rem 0 0 0;
+}
+
+/* ── Issue Date Row ── */
+.cert-date-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(6, 11, 22, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.74rem;
+}
+
+.cert-date-label {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.cert-date-val {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* ── Skills Wrap ── */
+.cert-skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    background: transparent;
+}
+
+.cert-skill-tag {
+    font-size: 0.66rem;
+    font-weight: 500;
+    color: var(--text-light);
+    background: rgba(6, 11, 22, 0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    padding: 0.2rem 0.6rem;
+    transition: all 0.2s ease;
+}
+
+.cert-card:hover .cert-skill-tag {
+    border-color: rgba(var(--cert-accent-rgb), 0.18);
+}
+
+/* ── Verify Button Action Row ── */
+.cert-action-row {
+    margin-top: auto;
+    background: transparent;
+}
+
+.cert-verify-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    padding: 0.5rem var(--space-md);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--cert-accent-theme);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.cert-verify-btn:hover {
+    background: var(--cert-accent-theme);
+    color: var(--bg-dark);
+    border-color: transparent;
+    transform: translateY(-1.5px);
+    box-shadow: 0 6px 15px rgba(var(--cert-accent-rgb), 0.25);
+}
+
+.cert-verify-btn i {
+    font-size: 11px;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE DESIGN
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 991px) {
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+}
